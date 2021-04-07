@@ -9,6 +9,14 @@ Go to http://192.168.0.1:8065/
 * Menu -> Integrations -> Incoming Webhooks -> Add
 
 * https://stackoverflow.com/questions/53712149/how-to-send-mattermost-notifications-in-jenkins-using-groovy
+In the Jenkinsfile
 ```
+...
+       mattermostSend (
+          color: "#2A42EE",
+          channel: 'essai',
+          endpoint: 'http://192.168.0.133:8065/hooks/wfoscr4wdiyyie51n17815sxie', 
+          message: "Hello from jenkins"
+        ) 
 
 ```
